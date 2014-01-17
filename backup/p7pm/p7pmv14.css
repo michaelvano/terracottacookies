@@ -1,0 +1,99 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Vertical
+  Style Theme:14 - Bartlett
+  -----------------------------------
+*/
+#p7PMnav {
+	margin: 0;
+	padding:0;
+	border-bottom: 1px solid #ffffff;
+}
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-image: url(../images/bart_menubg.jpg);
+	border-bottom: 1px solid #333333;
+	background-color: #C0BBB5;
+}
+#p7PMnav ul {
+	margin: 0;
+	padding: 0;
+	z-index: 10000;
+}
+#p7PMnav a {
+	border-bottom: 0;
+	border-top: 1px solid #EEEEEE;
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	padding: 4px 12px 4px 10px;
+	color: #FFFFFF;
+	line-height:1;
+}
+#p7PMnav ul a {
+	border-left: 1px solid #EEEEEE;
+	border-right: 1px solid #333333;
+	line-height:1;
+}
+#p7PMnav a:hover, #p7PMnav a:active, #p7PMnav a:focus,
+#p7PMnav .p7PMon, #p7PMnav .p7PMon:hover, 
+#p7PMnav .p7PMon:active {
+	color: #333333;
+	background-color: #AFC0A9;
+	letter-spacing: 0.01px;
+	border-top: 1px solid #CAD5C6;
+}
+#p7PMnav ul a:hover, #p7PMnav ul a:active, #p7PMnav ul a:focus,
+#p7PMnav ul .p7PMon, #p7PMnav ul .p7PMon:hover, 
+#p7PMnav .p7PMon:active {
+	border-left: 1px solid #CAD5C6;
+}
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark, #p7PMnav .p7PMmark:hover {
+	font-weight: bold;
+}
+/* ------ the trigger link styles ------- */
+
+
+/*the normal trigger link */
+#p7PMnav .p7PMtrg, #p7PMnav .p7PMtrg:hover, #p7PMnav .p7PMtrg:active {
+	background-image:  url(img/p7PM_dark_east.gif);
+	background-repeat:	no-repeat;
+	background-position: right center;
+}
+/*the submenu classes */
+
+#p7PMnav .p7PMhide {
+	left: -9000px;
+	border: 0;
+}
+#p7PMnav .p7PMshow {
+	left: auto;
+	z-index: 20000 !important;
+}
+/* Top level menu width */
+#p7PMnav {
+	width: 174px;
+}
+
+/* 2nd and subsequent Submenu widths */
+#p7PMnav ul {
+	width: 174px;
+}
+#pmmcrumb {
+	font-weight: bold;
+	color: #333333;
+}
+#pmmcrumb a, #pmmcrumb a:visited {
+	font-weight: normal;
+	color: #333333;
+}
+#pmmcrumb a:hover, #pmmcrumb a:active, #pmmcrumb a:focus {
+	font-weight: normal;
+	color: #956870;
+}

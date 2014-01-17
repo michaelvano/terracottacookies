@@ -1,0 +1,55 @@
+/* 
+  -----------------------------------
+  Accordion Panel Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 09 - Image-Based
+  -----------------------------------
+*/
+
+.p7APM09 {
+	margin: 0;
+	width: auto;
+	font: 10px Arial, Helvetica, sans-serif;
+}
+.p7APM09 img {
+	border: 0;
+}
+.p7APM09 .p7APMtrig {
+	margin: 0;
+	padding: 0;
+}
+.p7APM09 .p7APMtrig h3, .p7APM09 .p7APMtrig h4 {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+.p7APM09 .p7APMtrig a {
+	display: inline;
+}
+.p7APM09 .p7APMtrig a:hover {
+	background-color: transparent !important;
+}
+.p7APM09 .p7APMtrig a:active, .p7APM09 .p7APMtrig a:focus {
+	outline: 1px dotted #ccc;
+}
+.p7APM09 .p7APMcwrapper {
+	position: relative;
+}
+.p7APM09 .p7APMpanelcontent {
+	padding: 16px;
+	line-height: 1.5em;
+	margin: 0 21px;
+	border-right: 1px dotted #000;
+	border-left: 1px dotted #000;
+}
+.p7APM09 .p7APMcontent h2, .p7APM09 .p7APMcontent h3, 
+.p7APM09 .p7APMcontent h4 {
+	line-height: normal;
+}
+.p7APM09 .p7APMcontent p {
+	margin: 6px 0;
+}
+.p7APM09 .current_mark {
+	font-weight: bold;
+	color: #D61F1F;
+}

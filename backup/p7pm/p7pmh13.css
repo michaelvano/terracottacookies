@@ -1,0 +1,106 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Horizontal
+  Style Theme: 13 - Venezia
+  -----------------------------------
+*/
+#p7PMnav {
+	margin: 0;
+	padding:0;
+	background-color: #FFFFFF;
+}
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#p7PMnav ul li {
+	border-right: 0;
+}
+#p7PMnav ul {
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFFF;
+	border-top: 1px solid #EEEFEA;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #EEEFEA;
+	position: absolute;
+	left: -9000px;
+	z-index: 10000;
+}
+#p7PMnav a {
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #CCCCCC;
+	line-height:1;
+}
+#p7PMnav ul a {
+	color: #333333;
+}
+#p7PMnav a:hover, #p7PMnav a:active, #p7PMnav a:focus {
+	background-color: #D14550;
+	color: #FFFFFF;
+	letter-spacing: .01px;
+}
+
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark {
+	color: #333333;
+	font-weight: bold;
+}
+
+/* ------ the trigger link styles ------- */
+
+/*the normal trigger links */
+#p7PMnav ul .p7PMtrg, #p7PMnav ul .p7PMon {
+	background-image:  url(img/p7PM_dark_east.gif);
+	background-repeat:	no-repeat;
+	background-position: right center;
+}
+/* the active trigger link style */
+#p7PMnav .p7PMon {
+	background-color: #55A25E;
+	color: #FFFFFF;
+}
+
+/*the submenu classes */
+
+#p7PMnav .p7PMhide {
+	left: -9000px;
+	border: 0;
+}
+#p7PMnav .p7PMshow {
+	left: auto;
+	z-index: 20000 !important;
+}
+/* Top level menu width */
+#p7PMnav li {
+	float: left;
+	width: 7.5em;
+}
+#p7PMnav ul li {
+	float: none;
+}
+/* 2nd and subsequent Submenu widths */
+#p7PMnav ul, #p7PMnav ul li {
+	width: 12em;
+}
+#pmmcrumb {
+	font-size: 0.9em;
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: #8B9478;
+}
+#pmmcrumb a, #pmmcrumb a:visited {
+	font-weight: normal;
+	color: #6D755E;
+}
+#pmmcrumb a:hover, #pmmcrumb a:active, #pmmcrumb a:focus {
+	font-weight: normal;
+	color: #333333;
+}

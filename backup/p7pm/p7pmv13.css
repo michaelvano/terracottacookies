@@ -1,0 +1,104 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Vertical
+  Style Theme: 13 - Venezia
+  -----------------------------------
+*/
+#p7PMnav {
+	margin: 0;
+	padding:0;
+	border-bottom: 1px solid #000000;
+	font-size: 0.9em;
+}
+#p7PMnav ul {
+	margin: 0;
+	padding:0;
+	border-top: 1px solid #EEEFEA;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #EEEFEA;
+}
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#p7PMnav ul {
+	z-index: 10000;
+	border-bottom: 1px solid #333333;
+}
+#p7PMnav a {
+	display: block;
+	text-decoration: none;
+	padding: 3px 10px;
+	color: #333333;
+	line-height:1;
+	background-color: #FFFFFF;
+}
+#p7PMnav ul a {
+	color: #333333;
+	background-color: #FFFFFF;
+	border: 0;
+}
+#p7PMnav a:hover, #p7PMnav a:active, #p7PMnav a:focus {
+	background-color: #D14550;
+	color: #FFFFFF;
+	letter-spacing: .01px;
+}
+#p7PMnav ul a:hover, #p7PMnav ul a:active, #p7PMnav ul a:focus {
+	border: 0;
+}
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark {
+	color: #333333;
+	font-weight: bold;
+}
+
+/* ------ the trigger link styles ------- */
+
+/*the normal trigger link */
+#p7PMnav .p7PMtrg, #p7PMnav .p7PMon {
+	background-image:  url(img/p7PM_dark_east.gif);
+	background-repeat:	no-repeat;
+	background-position: right center;
+}
+/* the active trigger link style */
+#p7PMnav .p7PMon {
+	background-color: #6AB07C;
+	color: #FFFFFF;
+}
+/*the submenu classes */
+
+#p7PMnav .p7PMhide {
+	left: -9000px;
+	border: 0;
+}
+#p7PMnav .p7PMshow {
+	left: auto;
+	z-index: 20000 !important;
+}
+/* Top level menu width */
+#p7PMnav {
+	width: 180px;
+}
+/* 2nd and subsequent Submenu widths */
+#p7PMnav ul, #p7PMnav ul li {
+	width: 12em;
+}
+
+#pmmcrumb {
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: #8B967A;
+}
+#pmmcrumb a, #pmmcrumb a:visited {
+	font-weight: normal;
+	color: #949E85;
+}
+#pmmcrumb a:hover, #pmmcrumb a:active, #pmmcrumb a:focus {
+	font-weight: normal;
+	color: #333333;
+}

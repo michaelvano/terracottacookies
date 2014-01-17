@@ -1,0 +1,3 @@
+[10-Oct-2013 20:55:58 America/New_York] PHP Fatal error:  Call to undefined function checkPage() in /home2/tcc/public_html/a/inc/navs/about-us.php on line 2
+[12-Nov-2013 01:22:19 America/New_York] PHP Fatal error:  Call to undefined function checkPage() in /home2/tcc/public_html/a/inc/navs/about-us.php on line 2
+[16-Nov-2013 10:00:51 America/New_York] PHP Fatal error:  Call to undefined function checkPage() in /home2/tcc/public_html/a/inc/navs/about-us.php on line 2

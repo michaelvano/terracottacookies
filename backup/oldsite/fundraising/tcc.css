@@ -1,0 +1,9 @@
+.text {
+	font: 11px Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+.style2large {
+	color: #CC0066;
+	font-size: 14px;
+	font-weight: bold;
+}

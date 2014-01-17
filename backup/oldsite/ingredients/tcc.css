@@ -1,0 +1,17 @@
+.text {
+	font: 11px Arial, Helvetica, sans-serif;
+}
+.textlarge {
+
+	font: 13px Arial, Helvetica, sans-serif;
+}
+.textindent {
+	font-size: 11px;
+	margin-left: 10px;
+	padding-left: 10px;
+
+}
+.textsmall {
+
+	font: 9px Arial, Helvetica, sans-serif;
+}

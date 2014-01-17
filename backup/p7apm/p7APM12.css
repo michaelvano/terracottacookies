@@ -1,0 +1,92 @@
+/* 
+  -----------------------------------
+  Accordion Panel Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 12 - Transparently
+  -----------------------------------
+*/
+
+.p7APM12 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	padding: 0px;
+	border-bottom: 4px solid #000;
+	margin: 0 auto;
+	width: auto;
+	background-image: url(img/p7apmTransparently.png);
+}
+.p7APM12 .p7APMtrig {
+	margin: 0;
+	padding: 0;
+}
+.p7APM12 .p7APMtrig h3, .p7APM12 .p7APMtrig h4 {
+	margin: 0 !important;
+	padding: 0 !important;
+	letter-spacing: normal !important;
+	font-size: 14px;
+	font-weight: normal;
+}
+.p7APM12 .p7APMtrig a {
+	display: block;
+	text-decoration: none;
+	padding: 8px 8px 8px 20px;
+	color: #FFF !important;
+	font-weight: normal;
+	background-image: url(img/p7apmPlus_white.gif) !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #786385;
+	border-top: 1px solid #9581A0;
+	border-right: 1px solid #6A5775;
+	border-bottom: 1px solid #6A5775;
+	border-left: 1px solid #9581A0;
+	font-variant: small-caps;
+}
+.p7APM12 .p7APMtrig .p7APM_ext, .p7APM12 .p7APMtrig .p7APM_ext.p7APMtrig_down {
+	background-image: url(img/p7apm_page_white.gif) !important;
+	color: #FFF !important;
+	background-color: #786385 !important;
+	letter-spacing: normal !important;
+}
+.p7APM12 .p7APMtrig a:hover {
+	color: #CCC !important;
+	background-color: #000 !important;
+	border-color: #000;
+}
+.p7APM12 .p7APMtrig a:active, .p7APM12 .p7APMtrig a:focus {
+	outline: 1px dotted #ccc;
+}
+.p7APM12 .p7APMtrig .p7APMtrig_down {
+	background-image: url(img/p7apmMinus_white.gif) !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+	color: #FFF !important;
+	background-color: #252525;
+	border-color: #000;
+	letter-spacing: .15em;
+}
+.p7APM12 .p7APMcwrapper {
+	position: relative;
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7APM12 .p7APMpanelcontent {
+	padding: 20px;
+	line-height: 1.5em;
+	color: #000;
+	margin: 0;
+}
+.p7APM12 .p7APMcontent h2, .p7APM12 .p7APMcontent h3, 
+.p7APM12 .p7APMcontent h4 {
+	font-size: 14px;
+	margin: 0px;
+	line-height: normal;
+	letter-spacing: 0.1em;
+}
+.p7APM12 .p7APMcontent p {
+	margin: 6px 0;
+}
+.p7APM12 .current_mark {
+	font-weight: bold !important;
+}

@@ -1,0 +1,27 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 7px;
+
+}
+
+td {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+th {
+	font-family: Arial, Helvetica, sans-serif;
+}
+table.mystyle td {
+	padding:0.5em 1em;
+	margin:0;
+	border:1px solid blue;
+	background: eeeeee;
+	font: 8px Arial, Helvetica, sans-serif;
+
+}
+table td {border-top: 1px solid #CCCCCC; border-left:1px solid #CCCCCC;}
+table {border-bottom:1px solid #CCCCCC; border-right:1px solid #CCCCCC;}
+TR.highlight {background: yellow;}
+.table {
+	font: 9px Arial, Helvetica, sans-serif;
+}

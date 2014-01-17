@@ -1,0 +1,4 @@
+[08-Jan-2010 17:24:59] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20060613/uploadprogress.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20060613/uploadprogress.so: undefined symbol: core_globals_id in Unknown on line 0
+[16-Sep-2010 15:15:31] PHP Notice: A feed could not be found at http://wordpress.org/extend/plugins/rss/browse/new/ in /home/tcc/public_html/blog/wp-includes/class-simplepie.php on line 1680
+[16-Sep-2010 15:15:31] PHP Notice: A feed could not be found at http://wordpress.org/extend/plugins/rss/browse/updated/ in /home/tcc/public_html/blog/wp-includes/class-simplepie.php on line 1680
+[16-Sep-2010 15:18:08] PHP Notice: A feed could not be found at http://wordpress.org/extend/plugins/rss/browse/updated/ in /home/tcc/public_html/blog/wp-includes/class-simplepie.php on line 1680

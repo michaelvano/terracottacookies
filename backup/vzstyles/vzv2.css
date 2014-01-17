@@ -1,0 +1,135 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Page Pack 01
+   Venezia Vertical 2 Column
+  -----------------------------------
+*/
+/*
+PAGE LAYOUT STYLES
+*/
+/*
+The background image is set to be fixed (while the page is scrolled) by
+use of the background-attachment property.*/
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	color: #333333;
+	background: #FFFFFF url(../images/TClogo.jpg) no-repeat fixed left bottom;
+}
+/*
+This is a DIV that surrounds the page content and centers it. It
+is set to a relative position so that we can nest absolutely
+positioned elements inside it.*/
+#wrapper {
+	position: relative;
+	width: 750px;
+	margin: 0px auto;
+}
+/*
+Sets the large masthead background image, sets the height of the table cell
+to match the height of the background image. Sets the table cell contents
+to align in the middle. */
+#masthead {
+	width: 750px;
+	background-image: url(../images/vzh_mastbg.jpg);
+	background-repeat: repeat-x;
+	background-color: #B6B6B6;
+	border: 1px solid #999999;
+}
+/*
+This rule sets the masthead pizza graphic as a background on the DIV
+that contains the embedded logo image. The embedded image appears naturally
+at the left edge of the parent masthead cell, while the pizza background
+is displayed at the right edge.*/
+#logodiv {
+	background-image: url(../images/vzh_pizza.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+/*
+The sidebar is positioned absolutely inside the relatively positioned
+wrapper DIV. It's top is set to 104px to clear the masthead above it.*/
+#sidebar {
+	position: absolute;
+	top: 104px;
+	left: 0;
+	width: 180px;
+	border-left: 1px solid #CCCCCC;
+	border-bottom: 4px solid #CCCCCC;
+}
+/*
+Sidecontent is a static DIV nested inside the sidebar, and below the menu. This
+allows us to set padding for only this DIV, thereby permitting the menu to be
+flush with the edges of the sidebar.*/
+#sidecontent {
+	font-size: 0.75em;
+	background-color: #D14550;
+	padding: 12px;
+	border-top: 1px solid #D9666F;
+}
+/*
+Sets styles for the main content DIV. Note that the
+verticalRule background image is the dashed border between the
+main content cell and the sidebar. The left margin of 181px allows
+this DIV to clear the right edge of tha absolutely positioned
+sidebar.*/
+#maincontent {
+	margin-left: 181px;
+	width: 510px;
+	padding: 20px 30px;
+	background-image: url(../images/vzh_verticalRule.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	border-right: 1px solid #333333;
+	border-bottom: 1px solid #333333;
+	font-size: .85em;
+	line-height: 1.5em;
+}
+h1, h2, h3 {
+	font-family: "Palatino Linotype", Georgia, "Times New Roman", serif;
+	margin: 0px;
+	line-height: normal;
+}
+h1 {
+	font-size: 2em;
+}
+h2 {
+	font-size: 1.7em;
+	margin: 0;
+}
+h3 {
+	font-size: 1.4em;
+	margin: 24px 0px 0px;
+}
+#sidebar h3 {
+	color: #FFFFFF;
+	margin: 0;
+}
+#footer {
+	font-size: .75em;
+	color: #D14550;
+	padding: 12px 0px 12px 182px;
+}
+/*
+Sets link styles for all links on the page except the Pop Menu Magic Menu.*/
+a:link {
+	color: #6A6784;
+}
+a:visited {
+	color: #999999;
+}
+a:hover, a:active, a:focus {
+	color: #D14550;
+}
+#sidecontent a:link {
+	color: #FFFFFF;
+}
+#sidecontent a:visited {
+	color: #333333;
+}
+#sidecontent a:hover, a:active, a:focus {
+	color: #000000;
+}

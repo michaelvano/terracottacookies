@@ -1,0 +1,224 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Bartlett Page Pack
+  Vertical 2 Column Fluid
+  -----------------------------------
+*/
+body {
+	font-family: "Trebuchet MS", Arial, sans-serif;
+	color: #333333;
+	margin: 36px 0;
+	padding: 0;
+	background-color: #BCB7B1;
+	background-image: url(../images/bart_pbg.jpg);
+}
+
+/*The mainbox DIV contains all of the elements that comprise the larger
+rounded box: the Bartlett logo, main content area, copyright notice.
+Mainbox is set to have a left margin of 224px.
+This allows it to be positioned to the right of sidebar, which is
+absolutely positioned. There is no width assignment, allowing
+mainbox to gorow and shrink depending on the width of the browser window.
+
+The background image is positioned at the top left edge and tiles
+vertically along the Y-Axis - creating the border effect on the
+left edge of the box.
+
+Min-width is set to 400px. This prevents the box from getting too narrow -
+to the point that it would either break the layout or make text
+impossible to read. When a user makes the browser window narrow,
+mainbox will shrink in width until it reaches 400px - then the
+browser will spawn a horizontal scrollbar. MSIE 6 does not support
+min-width, but we have included a special workaround. See the
+readme_first file included with this PagePack for details.*/
+#mainbox {
+	margin: 0 24px 0 224px;
+	background-image: url(../images/bart_leftmidBG.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	background-color: #FFFFFF;
+	min-width: 400px;
+}
+
+/*The masthead DIV contains the background images that comprise the
+mainbox's upper curve, as well as the logodiv.
+Masthead's background image tiles left to right along the X-Axis
+creating the masthead's textured backdrop.*/
+#masthead {
+	background-image: url(../images/bart_mhBG.jpg);
+	background-repeat: repeat-x;
+	background-color: #D6D9C4;
+}
+
+/*The logodiv carries the embedded logo image and a right-aligned
+background image that creates the abstract pear scene and the
+top right corner of the top curve.*/
+#logodiv {
+	background-image: url(../images/bart_logoBG.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+/*The maincontent DIV is nested inside mainbox and renders below
+the masthead. The background image is positioned at the top right
+edge and tiles vertically along the Y-Axis - creating the drop
+shadow effect on the right edge of the box. Padding is set
+6 pixels wider on the right to accomodate for the space taken
+up by the right edge drop shadow background.*/
+#maincontent {
+	padding: 30px 36px 30px 30px;
+	background-image: url(../images/bart_mid.jpg);
+	background-repeat: repeat-y;
+	background-position: right top;
+	font-size: .8em;
+	line-height: 1.5em;
+}
+
+/*Paragraph margins are set.*/
+#maincontent p {
+	margin: 8px 0 12px 0;
+}
+
+/*The copyrightdiv carries the textured background along the bottom
+edge of the mainbox. Nested inside this DIV is the
+copyrightnotice DIV.*/
+#copyrightdiv {
+	background-image: url(../images/bart_copyBG.gif);
+	background-repeat: repeat-x;
+	background-color: #CCCCB9;
+}
+
+/*Copyrighnotice contains the embedded copyright notice, which
+also creates the bottom left curve of the main box. We also set
+a background image that completes the bottom curve.*/
+#copyrightnotice {
+	background-image: url(../images/bart_brCorner.gif);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+
+/*The sidebar is positioned absolutely. No matter how wide or tall
+your browser window is, this box will always be 36px from the top
+edge of the window and 24px in from the left. Add the width to the left
+position and the result equals the total horizontal area sidebar
+occupies: 24 + 180 = 204px. This is why mainbox was given a left
+margin of 224px - serving to position its left edge 20px to the right
+of the sidebar. The background image creates the drop shadow
+along the box's right edge.*/
+#sidebar {
+	position: absolute;
+	top: 36px;
+	left: 24px;
+	width: 180px;
+	background-image: url(../images/bart_small_mid.gif);
+	background-repeat: repeat-y;
+}
+
+/*The menubar DIV is the container for our menu. Left and right margins are
+set to 1px so that the menu fits inside the white borders of the sidebar.
+Font-size is set to .9em for the entire menu.*/
+#menubar {
+	margin: 0 1px;
+	font-size: .9em;
+}
+
+/*The sidecontent DIV comes after (below) the menu. Padding is set so text or
+or other content is not flush against the sidebar's borders. Font-size is
+set to .75em - small, but readable. Right margin is set to 8px to move the
+entire DIV left to compensate for the space taken up by the sidebar box's
+drop shadow.*/
+#sidecontent {
+	padding: 0 12px 12px 12px;
+	font-size: .7em;
+	margin-right: 8px;
+}
+
+/*Margins set for all paragraphs inside sidecontent.*/
+#sidecontent p {
+	margin: 6px 0 8px 0;
+}
+
+/*Sidebarfooter contains an embedded image that creates the sidebar's
+bottom curve. Setting the font-size to a tiny size prevents this
+DIV from growing too tall when users resize text. Without this
+workaround, certain user text sizes would cause an artifact to
+appear at the bottom of the sidebar.*/
+#sidebarfooter, #copyrightnotice {
+	font-size: 1%;
+}
+
+/*The pear class is assigned to a paragraph inside the sidecontent DIV
+and sets a faded pear graphic as the background. You can assign this
+class to other elements on your page if you want to.*/
+.pear {
+	background-image: url(../images/bart_pear.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+/*Footer styles*/
+#footer {
+	clear: both;
+	margin: 0 0 0 260px;
+	padding: 16px 0 0 0;
+	font-size: .75em;
+}
+#footer p {
+	margin: 0 0 3px 0;
+}
+
+/*Heading Styles*/
+h1, h2, h3 {
+	margin: 0px;
+	font-size: 2em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-align: left;
+	line-height: normal;
+	font-weight: normal;
+}
+h2, h3 {
+	margin: 24px 0 0 0;
+	font-size: 1.6em;
+	color: #C2B992;
+}
+h3 {
+	font-size: 1.4em;
+}
+#sidebar h3 {
+	color: #666666;
+}
+
+/*Link Styles. Applies to links except
+those that are in the main menubar.*/
+a:link {
+	color: #A59D6B;
+}
+a:visited {
+	color: #B5AD86;
+}
+a:hover, a:active, a:focus {
+	color: #7E886F;
+}
+#sidecontent a:link {
+	color: #837C50;
+}
+#sidecontent a:visited {
+	color: #9D9660;
+}
+#sidecontent a:hover, #sidecontent a:active, #sidecontent a:focus {
+	color: #333333;
+}
+#footer a:link {
+	color: #FFFFFF;
+}
+#footer a:visited {
+	color: #EEEEEE;
+}
+#footer a:hover, #footer a:active, #footer a:focus {
+	color: #333333;
+}

@@ -1,0 +1,92 @@
+/* 
+  -----------------------------------
+  Accordion Panel Magic
+  by Project Seven Development
+  www.projectseven.com
+  Style Theme: 05 - Cayenne
+  -----------------------------------
+*/
+
+.p7APM05 {
+	font-family: Arial, Helvetica, sans-serif;
+	border-bottom: 6px solid #000;
+	font-size: .8em;
+	margin: 0 auto;
+	width: auto;
+}
+.p7APM05 .p7APMtrig {
+	margin: 0;
+	padding: 0;
+	background-repeat: repeat-x;
+	background-color: #8F302C;
+}
+.p7APM05 .p7APMtrig h3, .p7APM05 .p7APMtrig h4 {
+	margin: 0 !important;
+	padding: 0 !important;
+	letter-spacing: normal !important;
+	font-size: 1.1em;
+}
+.p7APM05 .p7APMtrig a {
+	display: block;
+	text-decoration: none;
+	padding: 5px 8px 5px 20px;
+	color: #FFFFFF !important;
+	font-weight: normal;
+	background-image: url(img/p7apm_east_black.gif) !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+	border-bottom: 1px solid #CA3300;
+	border-top: 1px solid #FF5217;
+	font-variant: small-caps;
+}
+.p7APM05 .p7APMtrig .p7APM_ext, .p7APM05 .p7APMtrig .p7APM_ext.p7APMtrig_down {
+	background-image: url(img/p7apm_page_black.gif) !important;
+	background-color: transparent !important;
+	color: #000 !important;
+	border-bottom: 1px solid #CA3300 !important;
+	border-top: 1px solid #FF5217 !important;
+}
+.p7APM05 .p7APMtrig a:hover {
+	color: #FFF !important;
+	background-color: transparent !important;
+}
+.p7APM05 .p7APMtrig a:active, .p7APM05 .p7APMtrig a:focus {
+	outline: 1px dotted #ccc;
+}
+.p7APM05 .p7APMtrig .p7APMtrig_down, .p7APM05 .p7APMtrig .p7APMtrig_down:hover {
+	letter-spacing: 0.15em;
+	background-image: url(img/p7apm_south_gray.gif) !important;
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #222 !important;
+	color: #CCC !important;
+	border-color: #222 !important;
+}
+.p7APM05 .p7APMcwrapper {
+	position: relative;
+}
+.p7APM05 .p7APMcontent {
+	border-right: 1px solid #000;
+	border-left: 1px solid #000;
+}
+.p7APM05 .p7APMpanelcontent {
+	padding: 20px;
+	line-height: 1.5em;
+	background-image: url(img/p7apm_bevel_white.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFF;
+}
+.p7APM05 .p7APMcontent h2, .p7APM05 .p7APMcontent h3, 
+.p7APM05 .p7APMcontent h4 {
+	font-size: 1em;
+	margin: 0px;
+	line-height: normal;
+	letter-spacing: .2em;
+	font-variant: small-caps;
+}
+.p7APM05 .p7APMcontent p {
+	margin: 6px 0;
+}
+.p7APM05 .current_mark {
+	font-weight: bold !important;
+}

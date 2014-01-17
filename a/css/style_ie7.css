@@ -1,0 +1,96 @@
+/* ===========================
+	$GENERAL		
+===========================*/
+button.redButtonSmall { line-height:26px;}
+button.redButtonLarge {line-height:44px; border:1px solid #fff;}
+
+
+
+
+
+
+
+
+
+/* ===========================
+	$HEADER
+===========================*/
+#header .phone .garamond {line-height:1em;}
+
+
+
+
+
+
+
+
+
+/* ===========================
+	$NAV		
+===========================*/
+.nav {
+	width:960px;
+	height:50px;
+	display:block;
+	margin:0 auto;
+}
+.nav .row {
+	display:block;
+	height:50px;
+	width:960px;
+	border-right:1px solid #614c41;
+}
+.nav .row a {
+	color:#F5EAD7;
+	font-size:18px;
+	font-family: 'EB Garamond', serif;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:1px;
+	padding:15px 9px 0 9px;
+	height:35px;
+	display:inline-block;
+	border-left:1px solid #553c2b;
+	border-right:0;
+}
+
+
+
+
+
+
+
+
+
+/* ===========================
+	$CONTENT		
+===========================*/
+h1 { line-height:1.2em; }
+
+
+
+
+/* ==  NUTRIONAL INFORMATION == */
+#nutritionalFacts img.spacer { margin:0 8px 8px 0;}
+
+
+
+
+
+/* == CHECKOUT == */
+#shoppingCart .width175 {width:140px;}
+#shoppingCart .width290 {width:250px;}
+
+
+
+
+
+
+
+
+
+/* ===========================
+	$FORM		
+===========================*/
+input.checkbox {border:0px; background:transparent;}
+input {line-height:30px;}

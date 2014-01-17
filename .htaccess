@@ -1,0 +1,136 @@
+
+
+RewriteEngine ON
+
+ErrorDocument 404 /404.php
+
+RewriteCond %{HTTP_HOST} ^terracottacookies.com [NC]
+RewriteRule ^(.*)$ http://www.terracottacookies.com/$1 [L,R=301]
+
+
+
+
+RewriteRule ^index.php / [R=301,L]
+
+
+
+
+RewriteRule ^about-us$ /about-us/ [R=301,L]
+RewriteRule ^about-us/$ /about-us.php
+
+RewriteRule ^about-us/([0-9A-Za-z-]+)$ /about-us/$1/ [R=301,L]
+RewriteRule ^about-us/([0-9A-Za-z-]+)/$ /about-us.php?_subPage=$1
+
+
+
+RewriteRule ^blog$ /blog/ [R=301,L]
+RewriteRule ^blog/$ /blog.php
+
+RewriteRule ^blog/([0-9A-Za-z-]+)$ /blog/$1/ [R=301,L]
+RewriteRule ^blog/([0-9A-Za-z-]+)/$ /blog.php?_post=$1
+
+RewriteRule ^blog/page/([0-9]+)$ /blog/page/$1/ [R=301,L]
+RewriteRule ^blog/page/([0-9]+)/$ /blog.php?_page=$1
+
+#RewriteRule ^blog/category/([0-9A-Za-z-]+)$ /blog/category/$1/ [R=301,L]
+#RewriteRule ^blog/category/([0-9A-Za-z-]+)/$ /blog.php?_category=$1
+
+#RewriteRule ^blog/category/([0-9A-Za-z-]+)/page/([0-9]+)$ /blog/category/$1/page/$2/ [R=301,L]
+#RewriteRule ^blog/category/([0-9A-Za-z-]+)/page/([0-9]+)/$ /blog.php?_category=$1&_page=$2
+
+
+
+
+RewriteRule ^schools$ /schools/ [R=301,L]
+RewriteRule ^schools/$ /schools.php
+
+RewriteRule ^schools/([0-9A-Za-z-]+)$ /schools/$1/ [R=301,L]
+RewriteRule ^schools/([0-9A-Za-z-]+)/$ /schools.php?_subPage=$1
+
+
+
+
+RewriteRule ^products$ /products/ [R=301,L]
+RewriteRule ^products/$ /products.php
+
+RewriteRule ^products/([0-9A-Za-z-]+)$ /products/$1/ [R=301,L]
+RewriteRule ^products/([0-9A-Za-z-]+)/$ /products.php?_subPage=$1
+
+
+
+
+RewriteRule ^fundraising$ /fundraising/ [R=301,L]
+RewriteRule ^fundraising/$ /fundraising.php
+
+RewriteRule ^fundraising/([0-9A-Za-z-]+)$ /fundraising/$1/ [R=301,L]
+RewriteRule ^fundraising/([0-9A-Za-z-]+)/$ /fundraising.php?_subPage=$1
+
+
+
+
+
+RewriteRule ^private-label$ /private-label/ [R=301,L]
+RewriteRule ^private-label/$ /private-label.php
+
+
+
+
+RewriteRule ^wholesale$ /wholesale/ [R=301,L]
+RewriteRule ^wholesale/$ /wholesale.php
+
+
+
+
+RewriteRule ^retail$ /retail/ [R=301,L]
+RewriteRule ^retail/$ /retail.php
+
+
+
+
+RewriteRule ^certifications$ /certifications/ [R=301,L]
+RewriteRule ^certifications/$ /certifications.php
+
+
+
+
+RewriteRule ^email-club-sign-up$ /email-club-sign-up/ [R=301,L]
+RewriteRule ^email-club-sign-up/$ /email-club-sign-up.php
+
+
+
+
+RewriteRule ^contact$ /contact/ [R=301,L]
+RewriteRule ^contact/$ /contact.php
+
+
+
+
+RewriteRule ^services$ /services/ [R=301,L]
+RewriteRule ^services/$ /services.php
+
+
+
+
+RewriteRule ^admin$ /admin/ [R=301,L]
+RewriteRule ^admin/$ /admin/index.php
+
+
+
+RewriteRule ^password/reset$ /password/reset/ [R=301,L]
+RewriteRule ^password/reset/$ /admin/password-reset.php
+
+RewriteRule ^password/forget$ /password/forget/ [R=301,L]
+RewriteRule ^password/forget/$ /admin/password-forget.php
+
+RewriteCond %{HTTP_HOST} ^terracottacookies\.ca$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.terracottacookies\.ca$
+RewriteRule ^/?$ "http\:\/\/www\.terracottacookies\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tccookies\.ca$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tccookies\.ca$
+RewriteRule ^/?$ "http\:\/\/www\.terracottacookies\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^tccookies\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.tccookies\.com$
+RewriteRule ^/?$ "http\:\/\/www\.terracottacookies\.com\/" [R=301,L]
+

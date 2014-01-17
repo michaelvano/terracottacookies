@@ -1,0 +1,32 @@
+/* ===========================
+	$NAV		
+===========================*/
+
+#subNav a:hover, #subNav a.active {
+	color:#F5EAD7;
+	text-decoration:none;
+	background:url('/a/i/site/bg_sub-menu_hover.png') repeat-x;
+}
+
+
+
+#subNav .dropdown a {
+	padding:0 0 0 16px;
+	margin:0;
+	color:#472C24;
+	font-size:16px;
+	line-height:33px;
+	background:transparent;
+	border-bottom:1px solid #C4AA8D;
+}
+#subNav .dropdown a:hover {
+	color:#472C24;
+	background:transparent;
+	text-decoration:underline;
+	text-shadow: 0px 0px 0px #000;
+
+}
+#subNav .dropdown a img {
+	margin:5px 2px 5px -12px;
+	vertical-align:middle;
+}

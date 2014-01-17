@@ -1,0 +1,169 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Page Pack 01
+   Venezia Horizontal 2 Column
+  -----------------------------------
+*/
+/*
+PAGE LAYOUT STYLES
+*/
+/*
+The background image is set to be fixed (while the page is scrolled) by
+use of the background-attachment property.*/
+body {
+	margin: 5px 0 0;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+/*
+Sets the large masthead background image, sets the height of the table cell
+to match the height of the background image. Sets the table cell contents
+to align in the middle. */
+#masthead {
+	background-image: url(../images/vzh_mastbg.jpg);
+	background-repeat: repeat-x;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #999999;
+}
+/*
+This rule sets the masthead pizza graphic as a background on the DIV
+that contains the embedded logo image. The embedded image appears naturally
+at the left edge of the parent masthead cell, while the pizza background
+is displayed at the right edge.*/
+#logodiv {
+	margin: 0;
+	width: 100%;
+	background-image: url(../images/vzh_pizza.jpg);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+#logodiv img {
+	display: block;
+	padding: 5px;
+}
+/*
+This is a DIV that surrounds the page content and centers it.
+Because of the way this page is structured, it serves to work around
+a bug in IE5 Mac to ensure the page centers.*/
+#pagewrapper {
+	width: 43em;
+	margin: 0 auto;
+}
+/*The main content tables are set to a width of 43em. This unit of
+measure allows the page content to scale in width if the user resizes
+text. The width is the same as the width set for the pagewrapper DIV.*/
+#contentTable, #footerTable {
+	width: 714px;
+}
+#contentTable {
+	border: 1px solid #999999;
+}
+/*
+Sets borders and background for the top-level menu items-
+and font-size for the entire menu.*/
+#menubar {
+	font-size: 0.9em;
+	background: #FFFFFF;
+	text-align: center;
+	margin-left: 0px;
+}
+/*
+Sets styles for the main content table cell. Note that the
+verticalRule background image is the dashed border between the
+main content cell and the sidebar.*/
+#maincontent {
+	padding: 10px;
+	font-size: 0.8em;
+	line-height: 1.5em;
+	vertical-align: top;
+	background: #FFFFFF url(../images/barthz_vrule.gif) repeat-y right 30px;
+}
+#sidebar {
+	padding: 12px;
+	width: 10em;
+	vertical-align: top;
+	font-size: 0.75em;
+	background-color: #FFFFFF;
+}
+#footer {
+	font-size: 0.7em;
+	color: #CC0033;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+h1  {
+	color: #196E69;
+	font: bold 1.6em Arial, Helvetica, sans-serif;
+}
+/*
+Sets link styles for all links on the page except the Pop Menu Magic Menu.*/
+a:link {
+	color: #CC0033;
+}
+a:visited {
+	color: #CC0033;
+}
+a:hover, a:active, a:focus {
+	color: #CC0033;
+}
+h2 {
+	color: #57B2A9;
+	padding-top: 30px;
+	font: bold 1.4em Arial, Helvetica, sans-serif;
+}
+.red {
+	color: #CC0033;
+}
+.green {
+	color: #0E605C;
+}
+.blue {
+	font-weight: bold;
+	color: #174D57;
+}
+.tiny {
+	font-size: 90%;
+	color: #367270;
+}
+.columns {
+	border: 1px solid #CCCCCC;
+	padding: 5px;
+}
+.tinyred {
+	font-size: 90%;
+	color: #CC0033;
+}
+.imageright {
+	float: right;
+	padding-left: 10px;
+}
+.imageleft {
+	float: left;
+	padding-right: 10px;
+}
+h3 {
+	color: #57B2A9;
+	font: bold 1.4em Arial, Helvetica, sans-serif;
+}
+.tinygrey {
+	font-size: 90%;
+	color: #CCCCCC;
+}
+.tinyblack {
+	font-size: 90%;
+	color: #000000;
+}
+.bluemed {
+	font-weight: bold;
+	color: #003399;
+}
+.greenbold {
+	color: #0E605C;
+	font-weight: bold;
+}
+.redbold {
+	color: #CC0033;
+	font-weight: bold;
+}

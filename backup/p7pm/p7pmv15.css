@@ -1,0 +1,95 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Vertical
+  Style Theme: 15 - Tommi
+  -----------------------------------
+*/
+/*DO NOT EDIT!!!*/
+#p7PMnav, #p7PMnav ul {
+	margin: 0;
+	padding:0;
+}
+/*The Menu Background image assigned here*/
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	background-image:  url(img/tommy_mbg.jpg);
+	background-repeat: repeat-y;
+}
+/*DO NOT EDIT!!!*/
+#p7PMnav ul {
+	z-index: 10000;
+}
+/*Menu link Styles - Change link color here*/
+#p7PMnav a {
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	color: #E4E0C9;
+	line-height:1;
+	border-top: 1px solid #666666;
+	border-bottom: 1px solid #000000;
+}
+/*Sub-menu link borders*/
+#p7PMnav ul a {
+	border-top: 1px solid #666666;
+	border-bottom: 1px solid #000000;
+	border-right: 1px solid #000000;
+	border-left: 1px solid #666666;
+}
+/*Link hover styles - includes "ON" state*/
+#p7PMnav a:hover, #p7PMnav a:active, 
+#p7PMnav a:focus, #p7PMnav .p7PMon {
+	border-top: 1px solid #EB7C69;
+	background-color: #E7634C;
+	color: #333333;
+	letter-spacing: 0.01px;
+	border-left: 1px solid #EB7C69;
+}
+
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/*the normal trigger link and "ON" state link */
+#p7PMnav .p7PMtrg, #p7PMnav .p7PMon {
+	background-image:  url(img/p7PM_light_east.gif);
+	background-repeat:	no-repeat;
+	background-position: right center;
+}
+
+/*DO NOT EDIT!!!*/
+#p7PMnav .p7PMhide {
+	left: -9000px;
+	border: 0;
+}
+/*DO NOT EDIT!!!*/
+#p7PMnav .p7PMshow {
+	left: auto;
+	z-index: 20000 !important;
+}
+
+/* Top level menu width */
+#p7PMnav {
+	width: 180px;
+}
+/* 2nd and subsequent Submenu widths */
+#p7PMnav ul {
+	width: 180px;
+}
+
+/* Styles for optional Breadcrumb trail add-on */
+#pmmcrumb a, #pmmcrumb a:visited {
+	font-weight: normal;
+	color: #415485;
+}
+#pmmcrumb a:hover, #pmmcrumb a:active, #pmmcrumb a:focus {
+	font-weight: normal;
+	color: #333333;
+}

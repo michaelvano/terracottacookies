@@ -1,0 +1,82 @@
+/* 
+  -----------------------------------
+  PopMenu Magic Style Sheet
+  by Project Seven Development
+  www.projectseven.com
+  Menu Type: Vertical
+  Style Theme: 20 il Libro
+  -----------------------------------
+*/
+#p7PMnav {
+	margin: 0;
+	padding: 0;
+	width: 164px;
+}
+#p7PMnav li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#p7PMnav ul {
+	margin: 0;
+	padding: 0;
+	z-index: 10000;
+	border: 1px solid #333;
+	width: 164px;
+}
+#p7PMnav a {
+	display: block;
+	text-decoration: none;
+	padding: 2px 10px;
+	color: #ABABAB;
+	line-height:1.25em;
+	background-color: #4a4a4a;
+	border-top: 1px solid #555555;
+	border-bottom: 1px solid #333333;
+}
+#p7PMnav a:hover, #p7PMnav a:active, 
+#p7PMnav a:focus, #p7PMnav .p7PMon {
+	background-color: #333333;
+	color: #CCCCCC;
+	letter-spacing: 0.01px;
+}
+
+/* ------ the current page marker style ------ */
+#p7PMnav .p7PMmark {
+	color: #999999;
+	background-color: #464646;
+	font-weight: bold;
+}
+/* ------ the trigger link styles ------- */
+
+/*the normal trigger link */
+#p7PMnav .p7PMtrg, #p7PMnav .p7PMon {
+	background-image:  url(../images/p7PM_libro_east.gif);
+	background-repeat:	no-repeat;
+	background-position: right center;
+}
+/*the submenu classes */
+
+#p7PMnav .p7PMhide {
+	left: -9000px;
+	border: 0;
+	top: 0;
+}
+#p7PMnav .p7PMshow {
+	left: auto;
+	top: auto;
+	z-index: 20000 !important;
+}
+#pmmcrumb {
+	font-weight: bold;
+	margin-bottom: 16px;
+	color: #333333;
+}
+#pmmcrumb a, #pmmcrumb a:visited {
+	font-weight: normal;
+	color: #5A69A5;
+}
+#pmmcrumb a:hover, #pmmcrumb a:active, #pmmcrumb a:focus {
+	font-weight: normal;
+	color: #333333;
+}
