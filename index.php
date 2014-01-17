@@ -9,8 +9,9 @@ $canon = "http://www.terracottacookies.com";
 $page = "home";
 
 include('a/inc/header_base.php');
+
 ?>
-	
+
 <div id="container" class="home">
 
 

@@ -8,7 +8,13 @@ the files in the "functions" folder and includes them
 ====================================================================*/
 
 // ADDS THE CONFIG FILE THAT ACCESSES THE DATABASE
-require($_SERVER['DOCUMENT_ROOT'].'/config.php');
+if (strstr($_SERVER['HTTP_HOST'], 'dev.')) {
+	require($_SERVER['DOCUMENT_ROOT'].'/config.php');
+}
+else 
+{
+	require($_SERVER['DOCUMENT_ROOT'].'/../parameters/config.php');
+}
 
 // ADDS ALL THE FUNCTIONS LOCATED IN THE FUNCTIONS FOLDER
 

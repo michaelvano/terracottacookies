@@ -73,8 +73,8 @@ if (!empty($getStoreCart))
 	$from = 'orders@terracottacookies.com';
 	$headers  = "From: ".$from."\r\n"; 
 	$headers .= "Content-type: text/html\r\n";
-	// $headers .= 'Bcc: michael@nobulmedia.com' . "\r\n";
-	$headers .= 'Bcc: orders@terracottacookies.com' . "\r\n";
+	if (is_dev()) { $headers .= 'Bcc: michael@nobulmedia.com' . "\r\n"; }
+	else { $headers .= 'Bcc: orders@terracottacookies.com' . "\r\n"; }
 	
 	mail($to, $subject, $message, $headers);
 	

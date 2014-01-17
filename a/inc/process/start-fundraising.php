@@ -3,8 +3,8 @@ session_start();
 
 require($_SERVER['DOCUMENT_ROOT'].'/a/inc/bootstrap.php');
 
-$toEmail = 'jparker@terracottacookies.com';
-// $toEmail = 'michael@nobulmedia.com';
+if (is_dev()) { $toEmail = 'michael@nobulmedia.com'; }
+else { $toEmail = 'ktaal@terracottacookies.com'; }
 
 // GET POST INFORMATION
 extract($_POST);

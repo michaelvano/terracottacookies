@@ -5,6 +5,13 @@
 	GENERAL
 ===================*/
 
+// Function to check if in dev site or not
+function is_dev()
+{
+	if (strstr($_SERVER['HTTP_HOST'], 'dev.')) { return true; }
+	else { return false; }
+}
+
 // Gets the current pages url
 function thisPageUrl() {
 	
