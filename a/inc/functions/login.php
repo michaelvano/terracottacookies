@@ -41,9 +41,8 @@ function createHash($inText, $saltHash, $mode='sha1'){
 
 
 
-
-function login($username="", $password="", $page="") {
-	
+function login($username="", $password="", $page="", $sessionID)
+{	
 	if ($username == "") {return 1;}
 	if ($password == "") {return 2;} 
 	
@@ -71,7 +70,16 @@ function login($username="", $password="", $page="") {
 		$_SESSION['resetPassword']		= $info['resetPassword'];
 		
 		if ($info['resetPassword'] != "") { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/password/reset/">'; exit;	}
-		elseif ($_SESSION['permissionLevel'] >= 9) { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/admin/">'; exit; }
+		else 
+		{
+			if ($_SESSION['permissionLevel'] >= 9) { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/admin/">'; exit; }
+			else
+			{
+				$check_cart = getInfo('store_temp_items', 'session_id', $sessionID);
+				if (empty($check_cart)) { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/my-account.php">'; exit; }
+				else {  echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/shopping_checkout_pay-later.php">'; exit;  }
+			}
+		} 
 		
 	}
 	

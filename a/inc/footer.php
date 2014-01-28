@@ -68,7 +68,7 @@
 				<? safeEmail('office@terracottacookies.com'); ?>
 				<div class="clear10"></div>
 				Terra Cotta Cookie Co.<br />
-				20 Armstrong Ave., Unit 1,<br />
+				1-20 Armstrong Ave.<br />
 				Georgetown, ON. L7G 4R9
 				
 			</div>

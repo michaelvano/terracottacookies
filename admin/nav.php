@@ -46,5 +46,6 @@
 	<a href="/admin/testimonials.php" class="<? checkPage($subPage, "testimonials"); ?>">Manage Testimonials</a>
 	<a href="/admin/our-team.php" class="<? checkPage($subPage, "team"); ?>">Manage Our Team </a>
 	<a href="/admin/users.php" class="<? checkPage($subPage, "users"); ?>">Manage Users</a>
+	<a href="/admin/log-history.php" class="<? checkPage($subPage, "log"); ?>">User Log History</a>
 	<a href="/admin/logout.php">Logout</a>
 </div>

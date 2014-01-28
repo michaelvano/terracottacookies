@@ -23,8 +23,8 @@ include($_SERVER['DOCUMENT_ROOT'].'/a/inc/header.php');
 
 
 // PROCESS PASSWORD RESET
-if (isset($_POST['passwordReset'])) {
-	
+if (isset($_POST['passwordReset']))
+{
 	extract($_POST);
 	
 	if ($password == "") {$_msg = 1;}
@@ -41,7 +41,7 @@ if (isset($_POST['passwordReset'])) {
 		$update = updateInfo("users", $fields, $values, "id", $_id);
 		if ($update) {
 			if ($loggedIn) {$_msg = 5;}
-			else { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/admin/index.php?_msg=101">'; exit; }
+			else { echo '<META HTTP-EQUIV="Refresh" Content="0; URL=/login.php?_msg=101">'; exit; }
 		}
 		else {$_msg = 4;}	
 	
@@ -72,7 +72,7 @@ if ($_key != "" && $_id != "")
 
 
 
-
+/*
 elseif ($loggedIn) {
 	$permissionDenied = false;
 	//$ID = $_SESSION['ID'];
@@ -82,7 +82,7 @@ elseif ($loggedIn) {
 		$user = $info[0];
 	}
 }
-
+*/
 
 
 
@@ -96,6 +96,7 @@ else {$permissionDenied = true;}
 
 <?
 if ($permissionDenied) {echo '<span class="error">You do not have permissions to view this page';}
+elseif ($notRequested) {echo '<span class="error">The id does not match the request made. <br /> Please make sure the URL is copied correctly. </span>';}
 else {
 	
 	if ($loggedIn && $isAdmin) { include($_SERVER['DOCUMENT_ROOT'].'/admin/nav.php'); }
@@ -137,6 +138,7 @@ else {
 					<input type="hidden" name="_key" value="<? echo stripslashes($info['resetPassword']); ?>" />
 					<?
 				}
+				/*
 				else 
 				{
 					?>
@@ -144,6 +146,7 @@ else {
 					<input type="hidden" name="_key" value="<? echo stripslashes($_key); ?>" />
 					<?
 				}
+				*/
 				?>
 				 
 				<button type="submit" class="redButtonSmall left" name="passwordReset">Reset Password</button>

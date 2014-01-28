@@ -302,7 +302,7 @@ include('a/inc/header.php');
 	if (!empty($cartItems))
 	{
 		?>
-		<a href="/shopping_checkout_pay-later.php" class="redButtonLarge right">
+		<a href="/login.php" class="redButtonLarge right">
 			Pay Later
 		</a>
 		<?

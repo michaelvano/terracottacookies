@@ -61,7 +61,7 @@ include('functions.php');
 if (isset($_GET['_msg'])) {$_msg = $_GET['_msg'];}
 
 // Log in script
-if (isset($_POST['tryLogin'])) { $_msg = login($_POST['email'], $_POST['password']); }
+if (isset($_POST['tryLogin'])) { $_msg = login($_POST['email'], $_POST['password'], '', $sessionID); }
 
 
 // gets action
@@ -99,7 +99,7 @@ $_start = ($_page*$_limit);
 // CHECKS IF USER IS LOGGED IN
 if (isset($_SESSION['ID']) && $_SESSION['ID'] != "") {$loggedIn = true;}
 if ($loggedIn && isset($_SESSION['permissionLevel']) && $_SESSION['permissionLevel'] >= 9) {$isAdmin = true;}
-if ($loggedIn && isset($_SESSION['permissionLevel']) && $_SESSION['permissionLevel'] == 1) {$isDealer = true;}
+if ($loggedIn && isset($_SESSION['permissionLevel']) && $_SESSION['permissionLevel'] == 1) {$isUser = true;}
 
 
 

@@ -45,7 +45,7 @@ if (isset($_POST['passwordForget'])) {
 				$header .= "From: noreply@terracottacookies.com \r\n";
 				$header .= "Content-type: text/html; charset=iso-8859-1\r\n";
 		
-				$subject = "Reset your Terra Cotta Cookies Admin Password";		
+				$subject = "Reset your Terra Cotta Cookies Login Password";		
 
 				$message = '
 					<style>
@@ -57,11 +57,12 @@ if (isset($_POST['passwordForget'])) {
 						
 						Hello '.$info['firstName'].' '.$info['lastName'].',
 						
-						<p>To reset your password, click the following link.</p>
+						<p>To reset your Terra Cotta Cookies password, click the following link.</p>
 						<a href="http://'.$_SERVER['SERVER_NAME'].'/password/reset/?_id='.$info['id'].'&_key='.$passwordReset.'" target="_blank">
 							http://'.$_SERVER['SERVER_NAME'].'/password/reset/?_id='.$info['id'].'&_key='.$passwordReset.'
 						</a>
 						<p>If you cannot click on the link, you can copy and paste the entire link into your browser.</p>
+						<p> - The Terra Cotta Cookies Team </p>
 					
 					</body>
 				</html>

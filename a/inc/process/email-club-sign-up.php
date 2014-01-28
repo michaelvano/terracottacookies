@@ -4,7 +4,7 @@ session_start();
 require($_SERVER['DOCUMENT_ROOT'].'/a/inc/bootstrap.php');
 
 if (is_dev()) { $toEmail = 'michael@nobulmedia.com'; }
-else { $toEmail = 'office@terracottacookies.com'; }
+else { $toEmail = 'ktaal@terracottacookies.com'; }
 
 
 // GET POST INFORMATION

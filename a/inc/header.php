@@ -31,15 +31,36 @@ include($_SERVER['DOCUMENT_ROOT'].'/a/inc/header_base.php');
 			</div>
 			
 			<?
-			if ($loggedIn && $isAdmin) 
+			if ($isAdmin) 
 			{
 				?>
 				<div class="right" style="margin:0 20px 0 0; color:#4c2d22;">
 					<div class="clear10"></div>
 					Welcome <? echo $_SESSION['name']; ?> |
 					<a href="/admin/">Admin Dashboard</a> |
-					<a href="/password/reset/">Reset Password</a> |
+					<!-- <a href="/password/reset/">Reset Password</a> | -->
 					<a href="/admin/logout.php">Logout</a>
+				</div>
+				<?
+			}
+			elseif ($isUser)
+			{
+				?>
+				<div class="right" style="margin:0 20px 0 0; color:#4c2d22;">
+					<div class="clear10"></div>
+					Welcome <? echo $_SESSION['name']; ?> |
+					<a href="/my-account.php">My Account</a> |					
+					<a href="/logout.php">Logout</a>
+				</div>
+				<?
+			}
+			else 
+			{
+				?>
+				<div class="right" style="margin:0 20px 0 0; color:#4c2d22;">
+					<div class="clear10"></div>
+					<a href="/login.php">Login</a> |
+					<a href="/shopping_register-user.php">Register</a>
 				</div>
 				<?
 			}

@@ -7,7 +7,7 @@ session_regenerate_id();
 
 
 // CHECK IF ORDER HAS BEEN PLACED
-if ($_GET['confirmedOrder'] != 1) { header('Location: /shopping-cart.php'); }
+if ($_GET['confirmedOrder'] != 1) { header('Location: /shopping-cart.php'); exit;}
 
 
 
@@ -22,8 +22,8 @@ if (!empty($getStoreCart))
 	
 	$total = $subtotal + $tax;
 	
-	$storeCartFields = array("session_id", "order_date", "ip_address", "school_name", "name", "address1", "city", "province", "postal_code", "phone", "mobile", "email", "shipping_same", "shipping_date", "is_pay_later", "wants_poster", "comments", "subtotal", "tax", "total");
-	$storeCartValues = array($sessionID, "NOW()", $ipAddress, $school_name, $name, $address1, $city, $province, $postal_code, $phone, $mobile, $email, $shipping_same, $shipping_date, $is_pay_later, $wants_poster, $comments, $subtotal, $tax, $total); 
+	$storeCartFields = array("session_id", "order_date", "ip_address", "user_id", "school_name", "name", "address1", "city", "province", "postal_code", "phone", "mobile", "email", "shipping_same", "shipping_date", "is_pay_later", "wants_poster", "comments", "subtotal", "tax", "total");
+	$storeCartValues = array($sessionID, "NOW()", $ipAddress, $user_id, $school_name, $name, $address1, $city, $province, $postal_code, $phone, $mobile, $email, $shipping_same, $shipping_date, $is_pay_later, $wants_poster, $comments, $subtotal, $tax, $total); 
 	$insertStoreCart = insertInfo("store_confirmed_carts", $storeCartFields, $storeCartValues);
 	$orderID = mysql_insert_id();	
 	
@@ -115,6 +115,20 @@ if (!empty($getStoreCart))
 
 else 
 {
+	// META DESCRIPTIONS
+	$mdesc = "";	
+	$mbots = "NOINDEX, NOFOLLOW";
+	$canon = "";
+	
+	$title = "Order Placed - Pay Later";
+	$page = "checkout";
+	$breadcrumbMain = "Order Placed";
+	$mainLink = "/shopping_checkout_pay-later_approved.php";
+	$thisPage = "/shopping_checkout_pay-later_approved.php";
+	
+	include('a/inc/header.php');	
+
+	
 	?>
 	<div id="checkingOut">
 	

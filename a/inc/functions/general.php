@@ -1,6 +1,4 @@
 <?
-
-
 /*==================
 	GENERAL
 ===================*/
@@ -148,26 +146,27 @@ function adminPagination($pageNumber, $numberOfPages, $thisPage) {
 	?>
 	<div class="pageNumbers">
 		<?
-		if ($pageNumber != 0)
+		if ($pageNumber != 1)
 		{
-			if ($pageNumber == 1 || $pageNumber == 0) {echo '<a href="'.$thisPage.'1" class="prev">Prev</a>';}
-			else { echo '<a href="'.$thisPage.($pageNumber).'" class="prev">Prev</a>'; }
+			if ($pageNumber == 1 || $pageNumber == 0) {echo '<a href="'.$thisPage.'" class="prev" rel="prev">Prev</a>';}
+			else { echo '<a href="'.$thisPage.($pageNumber-1).'" class="prev" rel="prev">Prev</a>'; }
 			echo '<a href="'.$thisPage.'1">1</a>';
 		}
-		if (($pageNumber-5) >= 1) {echo '. . .';}
-		if (($pageNumber-4) >= 1) {echo '<a href="'.$thisPage.($pageNumber-3).'">'.($pageNumber-3).'</a>';}
-		if (($pageNumber-3) >= 1) {echo '<a href="'.$thisPage.($pageNumber-2).'">'.($pageNumber-2).'</a>';}
-		if (($pageNumber-2) >= 1) {echo '<a href="'.$thisPage.($pageNumber-1).'">'.($pageNumber-1).'</a>';}
-		if (($pageNumber-1) >= 1) {echo '<a href="'.$thisPage.($pageNumber).'">'.($pageNumber).'</a>';}
-		if ($pageNumber == 0) { echo '<a href="'.$thisPage.($pageNumber+1).'" class="active">'.($pageNumber+1).'</a>'; } else {echo '<a href="'.$thisPage.($pageNumber+1).'" class="active">'.($pageNumber+1).'</a>'; }
-		if (($pageNumber+1) <= ($numberOfPages-2)) {echo '<a href="'.$thisPage.($pageNumber+2).'">'.($pageNumber+2).'</a>';}
-		if (($pageNumber+2) <= ($numberOfPages-2)) {echo '<a href="'.$thisPage.($pageNumber+3).'">'.($pageNumber+3).'</a>';}
-		if (($pageNumber+3) <= ($numberOfPages-2)) {echo '<a href="'.$thisPage.($pageNumber+4).'">'.($pageNumber+4).'</a>';}
-		if (($pageNumber+4) <= ($numberOfPages-2)) {echo '<a href="'.$thisPage.($pageNumber+5).'">'.($pageNumber+5).'</a>';}
-		if (($pageNumber+5) <= ($numberOfPages-2)) {echo '. . .';}
-		if ($pageNumber != ($numberOfPages-1)) {
-			echo '<a href="'.$thisPage.($numberOfPages).'">'.$numberOfPages.'</a>';
-			echo '<a href="'.$thisPage.($pageNumber+2).'" class="next">Next</a>';
+		if (($pageNumber-5) > 1) {echo '. . .';}
+		if (($pageNumber-4) > 1) {echo '<a href="'.$thisPage.($pageNumber-4).'">'.($pageNumber-4).'</a>';}
+		if (($pageNumber-3) > 1) {echo '<a href="'.$thisPage.($pageNumber-3).'">'.($pageNumber-3).'</a>';}
+		if (($pageNumber-2) > 1) {echo '<a href="'.$thisPage.($pageNumber-2).'">'.($pageNumber-2).'</a>';}
+		if (($pageNumber-1) > 1) {echo '<a href="'.$thisPage.($pageNumber-1).'" rel="prev">'.($pageNumber-1).'</a>';}
+		if ($pageNumber == 0) { echo '<a href="'.$thisPage.'" class="active">'.($pageNumber).'</a>'; }
+		else {echo '<a href="'.$thisPage.($pageNumber).'" class="active">'.($pageNumber).'</a>'; }
+		if (($pageNumber+1) < ($numberOfPages)) {echo '<a href="'.$thisPage.($pageNumber+1).'" rel="next">'.($pageNumber+1).'</a>';}
+		if (($pageNumber+2) < ($numberOfPages)) {echo '<a href="'.$thisPage.($pageNumber+2).'">'.($pageNumber+2).'</a>';}
+		if (($pageNumber+3) < ($numberOfPages)) {echo '<a href="'.$thisPage.($pageNumber+3).'">'.($pageNumber+3).'</a>';}
+		if (($pageNumber+4) < ($numberOfPages)) {echo '<a href="'.$thisPage.($pageNumber+4).'">'.($pageNumber+4).'</a>';}
+		if (($pageNumber+5) < ($numberOfPages)) {echo '. . .';}
+		if ($pageNumber != ($numberOfPages)) {
+			echo '<a href="'.$thisPage.($numberOfPages).'" >'.$numberOfPages.'</a>';
+			echo '<a href="'.$thisPage.($pageNumber+1).'" class="next" rel="next">Next</a>';
 		}
 		?>
 	</div>

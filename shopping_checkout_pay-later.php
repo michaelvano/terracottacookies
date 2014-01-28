@@ -2,23 +2,13 @@
 require_once('a/inc/bootstrap.php');
 
 
-
-
-
-
+// Checks if someone is logged in
+if (!$loggedIn) {header('Location: /login.php'); exit;}
 
 
 // CHECKS OF SHOPPING CART HAS BEEN MADE, IF NOT CREATE IT
 $getItems = getInfo("store_temp_items", "session_id", $sessionID);
 if (empty($getItems)) { header('Location: /shopping-cart.php'); }
-
-
-
-
-
-
-
-
 
 /* =======================
 	PROCESS CONTACT INFORMATION
@@ -38,12 +28,30 @@ if ($_action == "placeOrder")
 	
 	if (!$nameNeeded && !$addressNeeded && !$cityNeeded  && !$postalCodeNeeded  && !$phoneNeeded  && !$emailNeeded  && !$invalidEmail  && !$shippingDateNeded )
 	{
-		$fields = array("ip_address", "school_name", "name", "address1", "city", "province", "postal_code", "phone", "mobile", "email", "shipping_same", "shipping_date", "is_pay_later", "wants_poster", "comments");
-		$values = array($ipAddress, $school, $name, $address, $city, $province, $postal_code, $phone, $mobile, $email, 1, $shipping_date, 1, $wantsPoster, $comments);
+		$fields = array("ip_address", "user_id", "school_name", "name", "address1", "city", "province", "postal_code", "phone", "mobile", "email", "shipping_same", "shipping_date", "is_pay_later", "wants_poster", "comments");
+		$values = array($ipAddress, $user_id, $school, $name, $address, $city, $province, $postal_code, $phone, $mobile, $email, 1, $shipping_date, 1, $wantsPoster, $comments);
 		$update = updateInfo("store_temp_carts", $fields, $values, "session_id", $sessionID);
 		if ($update) { header('Location: /shopping_checkout_pay-later_approved.php?confirmedOrder=1'); }
 	}
 	else { $error = true; }
+}
+
+
+
+
+// Grab users information
+$get_user = getInfo('users', 'id', $_SESSION['ID']);
+if (!empty($get_user))
+{
+	$info = $get_user[0];
+	$school = stripslashes($info['school']); 
+	$name = stripslashes($info['firstName'].' '.$info['lastName']);
+	$address = stripslashes($info['address']); 
+	$city = stripslashes($info['city']); 
+	$postal_code = stripslashes($info['postal_code']); 
+	$phone = stripslashes($info['phone']); 
+	$mobile = stripslashes($info['mobile']); 
+	$email = stripslashes($info['email']); 
 }
 
 
@@ -118,9 +126,14 @@ include('a/inc/header.php');
 		echo '<div class="clear20"></div>';
 	}
 	?>
-	
+	<style>
+		input[readonly] {
+			background-color:#ededed;
+		}
+	</style>	
 	<span class="bold size18 helvetica">Contact Information:</span>
-	<div class="clear30"></div>
+	<p>If the mailing address is different than your account information, please update it in below.</p>
+	<div class="clear20"></div>
 	
 	<form enctype="multipart/form-data" method="post" action="<? echo $thisPage; ?>"> 
 		
@@ -129,7 +142,7 @@ include('a/inc/header.php');
 		<div class="clear"></div>
 		
 		<label>Contact Name: </label>
-		<input type="text" name="name" value="<? echo stripslashes($name); ?>" class="<? if ($nameNeeded) {echo 'required';} ?>" />
+		<input type="text" name="name" value="<? echo stripslashes($name); ?>" readonly  />
 		<div class="clear"></div>
 		
 		<label>Address: </label>
@@ -145,7 +158,7 @@ include('a/inc/header.php');
 		<div class="clear"></div>
 		
 		<label>Phone 1: </label>
-		<input type="text" name="phone" value="<? echo stripslashes($phone); ?>" class="<? if ($phoneNeeded) {echo 'required';} ?>" />
+		<input type="text" name="phone" value="<? echo stripslashes($phone); ?>" readonly  />
 		<div class="clear"></div>
 		
 		<label>Phone 2: </label>
@@ -153,7 +166,7 @@ include('a/inc/header.php');
 		<div class="clear"></div>
 		
 		<label>Email: </label>
-		<input type="text" name="email" value="<? echo stripslashes($email); ?>" class="<? if ($emailNeeded || $invalidEmail) {echo 'required';} ?>" />
+		<input type="text" name="email" value="<? echo stripslashes($email); ?>" readonly  />
 		<div class="clear"></div>
 		
 		<label>Comments: </label>
@@ -179,6 +192,8 @@ include('a/inc/header.php');
 		<div class="clear"></div>
 		
 		<div class="clear30"></div>
+		
+		<input type="hidden" name="user_id" value="<?= $_SESSION['ID']; ?>" />
 		
 		<input type="hidden" name="_action" value="placeOrder" />
 		<button type="submit" class="redButtonLarge"> Place Order </button>

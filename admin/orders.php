@@ -137,9 +137,38 @@ else
 		=========================*/
 		else 
 		{
-			if ($_action == "viewClosed") { $getInfo = getInfo("store_confirmed_carts", "is_closed", 1, "id", "DESC"); }
-			elseif ($_action == "viewAll") { $getInfo = getInfo("store_confirmed_carts", "", "", "id", "DESC"); }
-			else { $getInfo = getInfo("store_confirmed_carts", "is_closed", 0, "id", "DESC"); }
+			if (!isset($_GET['_page']) || $_GET['_page'] == '' || $_GET['_page'] == 0) {$_page = 1;}
+			else { $_page = $_GET['_page']; }
+			
+			$_limit = 35; 
+			$_start = ($_page-1) * $_limit;
+			
+			if ($_action == "viewClosed")
+			{
+				$get_total = getInfo("store_confirmed_carts", "is_closed", 1, "id", "DESC");
+				$total_pages = ceil(count($get_total)/$_limit);
+				
+				$getInfo = getInfo("store_confirmed_carts", "is_closed", 1, "id", "DESC", $_start, $_limit);
+				$pagination_link = '/admin/orders.php?_action=viewClosed&_page=';
+			}
+			
+			elseif ($_action == "viewAll")
+			{
+				$get_total = getInfo("store_confirmed_carts", "", "", "id", "DESC");
+				$total_pages = ceil(count($get_total)/$_limit);
+				
+				$getInfo = getInfo("store_confirmed_carts", "", "", "id", "DESC", $_start, $_limit);
+				$pagination_link = '/admin/orders.php?_action=viewAll&_page=';
+			}
+			
+			else
+			{
+				$get_total = getInfo("store_confirmed_carts", "is_closed", 0, "id", "DESC");
+				$total_pages = ceil(count($get_total)/$_limit);
+				
+				$getInfo = getInfo("store_confirmed_carts", "is_closed", 0, "id", "DESC", $_start, $_limit);
+				$pagination_link = '/admin/orders.php?_page=';
+			}
 			
 			switch($msg)
 			{
@@ -204,7 +233,12 @@ else
 				?>
 			
 			</table>
+			<div class="clear30"></div>
 			<?
+			if ($total_pages > 1)
+			{
+				adminPagination($_page, $total_pages, $pagination_link);
+			}
 		}
 		
 		
